@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <AnchorPane layoutX="382.0" layoutY="58.0" prefHeight="285.0" prefWidth="279.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <Label layoutX="107.0" layoutY="8.0" prefHeight="45.0" prefWidth="121.0" text="Log-In" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell Bold Italic" size="21.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <JFXTextField fx:id="usernametxt" focusColor="#ffdd00" labelFloat="true" layoutX="28.0" layoutY="64.0" prefHeight="26.0" prefWidth="232.0" promptText="Username/E-mail" style="-fx-prompt-text-fill: #ffdd00; -fx-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordtxt" focusColor="#ffdd00" labelFloat="true" layoutX="28.0" layoutY="130.0" prefHeight="26.0" prefWidth="232.0" promptText="Password" style="-fx-prompt-text-fill: #ffdd00; -fx-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="login" layoutX="51.0" layoutY="190.0" onAction="#onLogIn" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #e45642;" stylesheets="@hov.css" text="Log-in" textFill="WHITE" />
+            <Label fx:id="reaction" layoutX="84.0" layoutY="236.0" prefHeight="16.0" prefWidth="107.0" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="24.0" layoutY="52.0" prefHeight="78.0" prefWidth="286.0" text="Welcome to Shopper's Stop" wrapText="true">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <textFill>
+            <RadialGradient centerX="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="130.0" text="Your One-Stop-Shop Destination!" textFill="WHITE">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="260.0" text="Not Registered Yet?" textFill="WHITE">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <JFXButton fx:id="signup" buttonType="RAISED" layoutX="24.0" layoutY="291.0" onAction="#onSignUp" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #d4af37;" stylesheets="@hov.css" text="Sign-Up" textFill="WHITE" />
+   </children>
+</AnchorPane>

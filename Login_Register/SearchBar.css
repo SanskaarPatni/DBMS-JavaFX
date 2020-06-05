@@ -1,0 +1,10 @@
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2c821;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-radius: 20;
+}
+
+.text-field:focused {
+    -fx-pref-width: 200;
+}

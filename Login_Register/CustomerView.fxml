@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerViewController">
+   <children>
+      <ImageView fx:id="profileimg" fitHeight="50.0" fitWidth="56.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#onUpload" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="customername" layoutX="75.0" layoutY="21.0" prefHeight="43.0" prefWidth="204.0" text="Customer" textFill="#ffdd00">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="381.0" layoutY="17.0" prefHeight="38.0" prefWidth="175.0" text="Shopper's Stop" textFill="#ffdd00">
+         <font>
+            <Font name="Rockwell Italic" size="24.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <TextField fx:id="search" layoutX="374.0" layoutY="64.0" onKeyPressed="#onSearch" promptText="Search..." style="-fx-text-fill: #ffdd00; -fx-prompt-text-fill: #ffdd00;" stylesheets="@SearchBar.css">
+         <font>
+            <Font name="Rockwell Italic" size="14.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="586.0" layoutY="4.0" prefHeight="64.0" prefWidth="414.0">
+         <children>
+            <JFXButton fx:id="orders" onAction="#onOrders" prefHeight="64.0" prefWidth="143.0" stylesheets="@MenuBarHover.css" text="Orders" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="shoppingCart" layoutX="10.0" layoutY="10.0" onAction="#onShoppingCart" prefHeight="64.0" prefWidth="143.0" stylesheets="@MenuBarHover.css" text="Cart" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="wishlistView" layoutX="148.0" layoutY="10.0" onAction="#onWishlistView" prefHeight="64.0" prefWidth="143.0" stylesheets="@MenuBarHover.css" text="Wishlist" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="logOut" layoutX="153.0" layoutY="10.0" onAction="#onLogOut" prefHeight="64.0" prefWidth="143.0" stylesheets="@MenuBarHover.css" text="Log Out" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="productTable" layoutX="-4.0" layoutY="117.0" onMouseClicked="#onSelect" prefHeight="486.0" prefWidth="1006.0" stylesheets="@TableView.css">
+         <columns>
+            <TableColumn fx:id="image" prefWidth="182.0" text="Image" />
+            <TableColumn fx:id="name" prefWidth="198.0" text="Name" />
+            <TableColumn fx:id="price" prefWidth="203.0" text="Price" />
+            <TableColumn fx:id="category" prefWidth="203.0" text="Category" />
+            <TableColumn fx:id="seller" prefWidth="186.0" text="Seller" />
+            <TableColumn fx:id="productId" prefWidth="75.0" text="productId" visible="false" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

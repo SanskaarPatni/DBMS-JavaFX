@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="700.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddItemController">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="136.0" fitWidth="142.0" layoutX="14.0" layoutY="77.0" onMouseClicked="#onUpload" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image_add.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="293.0" layoutY="57.0" prefHeight="371.0" prefWidth="371.0" style="-fx-background-color: #9c2b27;">
+         <children>
+            <JFXTextArea fx:id="productDescription" focusColor="#ffdd00" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="185.0" prefWidth="253.0" promptText="Product Description" style="-fx-text-fill: #ffdd00; -fx-prompt-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="13.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXTextArea>
+            <JFXTextField fx:id="price" focusColor="#ffdd00" labelFloat="true" layoutX="18.0" layoutY="237.0" promptText="Price :$" style="-fx-text-fill: #ffdd00; -fx-prompt-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Rockwell" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="quantity" focusColor="#ffdd00" labelFloat="true" layoutX="18.0" layoutY="282.0" promptText="Quantity" style="-fx-text-fill: #ffdd00; -fx-prompt-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Rockwell" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="category" focusColor="#ffdd00" labelFloat="true" layoutX="18.0" layoutY="330.0" promptText="Category" style="-fx-text-fill: #ffdd00; -fx-prompt-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Rockwell" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="243.0" layoutY="14.0" prefHeight="40.0" prefWidth="136.0" text="Shopper' s Stop" textFill="#ffdd00">
+         <font>
+            <Font name="Rockwell Italic" size="18.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <JFXTextField fx:id="productName" focusColor="#ffdd00" labelFloat="true" layoutX="14.0" layoutY="239.0" promptText="Product Name" style="-fx-text-fill: #ffdd00; -fx-prompt-text-fill: #ffdd00;" unFocusColor="#ffdd00">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="Rockwell" size="13.0" />
+         </font>
+      </JFXTextField>
+      <HBox layoutX="412.0" prefHeight="52.0" prefWidth="291.0">
+         <children>
+            <JFXButton fx:id="dashboard" alignment="CENTER" onAction="#onDashboard" prefHeight="46.0" prefWidth="103.0" stylesheets="@MenuBarHover.css" text="Dashboard" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="sales" alignment="CENTER" onAction="#onSales" prefHeight="46.0" prefWidth="103.0" stylesheets="@MenuBarHover.css" text="Sales" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="logOut" alignment="CENTER" onAction="#onLogOut" prefHeight="46.0" prefWidth="103.0" stylesheets="@MenuBarHover.css" text="Log Out" textFill="#ffdd00">
+               <font>
+                  <Font name="Rockwell Italic" size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton fx:id="update" layoutX="15.0" layoutY="331.0" onAction="#onUpdate" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #e45642;" stylesheets="@hov.css" text="Add Product" textFill="WHITE">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
